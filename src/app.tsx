@@ -1,5 +1,5 @@
 import './app.css'
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import HomePage from './pages/home-page';
 import ForecastPage from './pages/forecast-page';
 import Header from './components/layout/header';
@@ -9,10 +9,12 @@ import { useIsAuthenticated } from '@azure/msal-react';
 
 function App() {
   const isAuthenticated = useIsAuthenticated();
-
+  const location = useLocation();
+  const isLoginPage = location.pathname === '/login';
   return (
     <>
-      <Header />
+      {/* <Header /> */}
+      {isAuthenticated && !isLoginPage && <Header />}
       <main className="flex-grow container mx-auto px-4 py-8">
         <Routes>
           {/* Rota pública de login - redireciona se já estiver autenticado */}

@@ -16,8 +16,8 @@ export const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
         {children}
       </AuthenticatedTemplate>
       <UnauthenticatedTemplate>
-        <div className="flex flex-col items-center justify-center min-h-screen">
-          <p className="text-lg mb-4">Você precisa estar logado para acessar esta página</p>
+        <div className="flex flex-col items-center justify-center min-h-screen">    
+            
           <button 
             onClick={() => navigate('/login')}
             className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
