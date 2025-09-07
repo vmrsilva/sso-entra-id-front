@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { useStudents } from '../hooks/use-student'
-import { Forecast } from '../services/student-api'
+import { useForecasts } from '../hooks/use-student'
+import { Forecast } from '../services/forecast-api'
 
-function StudentsPage() {
-  const { data: students, isLoading, error } = useStudents()
+function ForecastPage() {
+  const { data: students, isLoading, error } = useForecasts()
 
   if (isLoading) return <div>Loading...</div>
   if (error) return <div>Ocorreu um erro: {error.message}</div>
@@ -40,4 +40,4 @@ function StudentsPage() {
   )
 }
 
-export default StudentsPage
+export default ForecastPage

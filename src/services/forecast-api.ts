@@ -8,7 +8,7 @@ export interface Forecast {
   temperatureF: string;
 }
 
-export const getStudents = async (): Promise<Forecast[]> => {
+export const getForecast = async (): Promise<Forecast[]> => {
   const response = await apiClient(`/WeatherForecast`);
   return response.data;
 };

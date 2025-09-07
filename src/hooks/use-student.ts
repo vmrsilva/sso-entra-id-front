@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import { getStudents } from '../services/student-api';
+import { getForecast } from '../services/forecast-api';
 
-export const useStudents = () => {
+export const useForecasts = () => {
   return useQuery({
     queryKey: ['students'],
-    queryFn: getStudents
+    queryFn: getForecast
   });
 };
