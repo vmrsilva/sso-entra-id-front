@@ -12,6 +12,3 @@ Where you will need to specify the client id and the tenant id.
 1. npm i
 2. npm run dev
 
-## Tutorial
-
-Note: If you would like to go through the tutorial for this please see my [blog](https://jadecodes.substack.com/)

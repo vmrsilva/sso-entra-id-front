@@ -1,5 +1,5 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { getStudents,  Forecast } from '../services/student-api';
+import { useQuery } from '@tanstack/react-query';
+import { getStudents } from '../services/student-api';
 
 export const useStudents = () => {
   return useQuery({
@@ -7,30 +7,3 @@ export const useStudents = () => {
     queryFn: getStudents
   });
 };
-
-// export const useStudent = (id: number) => {
-//   return useQuery({
-//     queryKey: ['student', id],
-//     queryFn: () => getStudent(id)
-//   });
-// };
-
-// export const useUpdateStudent = () => {
-//   const queryClient = useQueryClient();
-//   return useMutation({
-//     mutationFn: ({ id, data }: { id: number; data: Forecast }) => updateStudent(id, data),
-//     onSuccess: () => {
-//       queryClient.invalidateQueries({ queryKey: ['students'] });
-//     },
-//   });
-// };
-
-// export const useDeleteStudent = () => {
-//   const queryClient = useQueryClient();
-//   return useMutation({
-//     mutationFn: deleteStudent,
-//     onSuccess: () => {
-//       queryClient.invalidateQueries({ queryKey: ['students'] });
-//     },
-//   });
-// };
