@@ -35,7 +35,6 @@ function Header() {
           </label>
           <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/students">Students</Link></li>
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-xl">POC SSO</Link>
@@ -43,7 +42,7 @@ function Header() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li><Link className="btn btn-primary" to="/">Home</Link></li>
-          <li><Link className="btn btn-primary" to="/students">Temperaturas</Link></li>
+          <li><Link className="btn btn-primary" to="/forecast">Temperaturas</Link></li>
         </ul>
       </div>
       <div className="navbar-end">
